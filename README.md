@@ -62,9 +62,16 @@ This document provides an overview of the essential concepts of routing in the L
 
 ## Resource Routes
 - **Automatic CRUD**: Create a set of routes for a resource controller with a single declaration.
-    ```php
-    Route::resource('photos', 'PhotoController');
-    ```
+    - **index()**: Display a listing of the resource.
+    - **create()**: Show the form for creating a new resource.
+    - **store()**: Store a newly created resource in storage.
+    - **show($id)**: Display the specified resource.
+    - **edit($id)**: Show the form for editing the specified resource.
+    - **update($id)**: Update the specified resource in storage.
+    - **destroy($id)**: Remove the specified resource from storage.
+```php
+Route::resource('photos', 'PhotoController');
+```
 
 ## Route Caching
 - **Performance Optimization**: Cache the routes for faster performance in production.
